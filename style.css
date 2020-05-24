@@ -1,0 +1,56 @@
+.title {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-container {
+    height: 400px;
+    width: 700px;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.transition-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.transition-image:hover {
+    opacity: 1;
+}
+
+
+.fade::after {
+    content: 'Catalina';
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade:hover::after {
+   opacity: 0.5; 
+}
